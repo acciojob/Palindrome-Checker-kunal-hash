@@ -1,14 +1,12 @@
 // complete the given function
 
 function palindrome(str){
-	let string = str;
-	let reverse = split("str").reverse().join();
-	if(reverse == string){
-		return true;
-		else{
-		return false;
-		}
-	}
-
+	const alphanumericOnly = str.toLowerCase().match(/[a-z0-9]/g);
+    // 2) Strip out non-alphanumeric characters
+    
+// 3) return string === reversedString
+return alphanumericOnly.join('') === alphanumericOnly.reverse().join('');
+    
 }
+console.log(palindrome("racecar"));
 module.exports = palindrome
